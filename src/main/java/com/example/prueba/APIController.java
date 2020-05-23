@@ -3,6 +3,8 @@ package com.example.prueba;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Date;
+
 @RestController
 public class APIController {
 
@@ -10,7 +12,8 @@ public class APIController {
 
     @GetMapping("/prueba")
     public String getPrueba(){
-        System.out.println(TEXTO);
+        Date hoy = new Date();
+        System.out.println(hoy.toString() + TEXTO);
         return TEXTO;
     }
 }
